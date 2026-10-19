@@ -1,0 +1,141 @@
+/*ESTILO DE LA CABECERA Y SU CONTENIDO*/
+
+
+header {
+    width: 100vw; 
+    background-color: #7c5342;
+    padding: 10px 0;
+    box-sizing: border-box; /* Para que el padding no afecte al ancho */
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+
+/* Estilo Cabecera */
+.cabecera {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7c5342;
+    padding: 10px 80px;
+    font-family: "Courier New", Courier, monospace;
+}
+
+.cabecera img {
+    cursor: pointer;
+}
+
+.menu-item {
+    position: relative;
+    margin: 0 15px;
+}
+
+.menu-item a {
+    text-decoration: none;
+    color: rgb(243, 226, 220);
+    font-size: larger;
+    font-weight: bold;
+    padding: 10px;
+    transition: color 0.3s;
+}
+
+.menu-item a:hover {
+    color: #FF5722; /* Color al pasar el cursor */
+}
+
+/* Submenú */
+.submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: none;
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+.submenu li {
+    width: 200px;
+}
+
+.submenu li a {
+    display: block;
+    text-decoration: none;
+    color: rgb(40, 28, 23);
+    padding: 10px;
+    transition: background-color 0.3s;
+}
+
+.submenu li a:hover {
+    background-color: #eee7e2;
+}
+
+.menu-item:hover .submenu {
+    display: block;
+}
+
+.user-icons img {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+
+
+
+
+/* Contenedor del menú desplegable */
+.slide-out-menu {
+    position: absolute;
+    top: 0;
+    right: -300px;
+    height: 100%;
+    width: 300px;
+    background-color: #EDEDED;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 10;
+
+    /* Escondemos el menú inicialmente */
+    visibility: hidden;
+    opacity: 0;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Lista de opciones */
+.slide-out-menu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.slide-out-menu ul li {
+    margin: 15px 0;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+}
+
+/* Clase activa: cuando el menú está visible */
+.slide-out-menu.active {
+    visibility: visible;
+    opacity: 1;
+    right: 0; /* Desliza el menú hacia dentro */
+}
+
+/* Estilos para los íconos */
+.user-icons {
+    display: flex;
+    align-items: center;
+}
+
+.user-icons img {
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.icon-trigger {
+    cursor: pointer;
+}

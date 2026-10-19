@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrenador Personal</title>
+    <link rel="stylesheet" href="../../Styles/css_header.css">
+    <link rel="stylesheet" href="../../Styles/css_estandar.css">
+    <link rel="stylesheet" href="../../Styles/css_entren_person.css">
+    
+    <script defer src="../../Scripts/js_header.js"></script>
+    
+</head>
+<body>
+    <header>
+        <div class="cabecera">
+            <a href="../../pagina_principal.html"><img src="../../img/logo.png" height="120" alt="Logo"></a>
+    
+            <div class="menu-item">
+                <a href="#">Preguntas</a>
+                <ul class="submenu">
+                    <li><a href="../preguntas/quien_som.html">Quiénes somos</a></li>
+                     <li><a href="../preguntas/preguntas_frec.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../preguntas/contacta.html">Informanos</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Entrenamiento</a>
+                <ul class="submenu">
+                    <li><a href="../entrenamiento/entren_principi.html">¿Eres principiante?</a></li>
+                    <li><a href="../entrenamiento/entren_planes.html">Planes de entrenamiento</a></li>
+                    <li><a href="../entrenamiento/entren_tuto.html">Ejercicios</a></li>
+                    <li><a href="../entrenamiento/entren_personal.html">Entrenador personal</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Salud</a>
+                <ul class="submenu">
+                    <li><a href="../salud/sal_consejos.html">Consejos</a></li>
+                    <li><a href="../salud/sal_nutricion.html">Nutrición</a></li>
+                    <li><a href="../salud/sal_meditacion.html">Meditación</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="../tienda/tien_prin.html">Tienda</a>
+                <ul class="submenu">
+                    <li><a href="../tienda/tien_ropa.html">Ropa</a></li>
+                    <li><a href="../tienda/tien_suplemento.html">Suplementos</a></li>
+                    <li><a href="../tienda/tien_accesorios.html">Accesorios</a></li> 
+                </ul>
+            </div>
+    
+            <div class="user-icons">
+                <img id="user-icon" src="../../img/user.png" height="50" alt="Usuario" class="icon-trigger">
+                <img id="settings-icon" src="../../img/settings.png" height="50" alt="Configuración" class="icon-trigger">
+            </div>
+            
+            <div id="user-menu" class="slide-out-menu">
+                <ul>
+                    <li>Mi información</li>
+                    <li>Historial entrenamientos</li>
+                    <li>Historial comidas</li>
+                    <li>Amigos</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </div>
+
+            <div id="settings-menu" class="slide-out-menu">
+                <ul>
+                    <li>Configuración de cuenta</li>
+                    <li>Privacidad</li>
+                    <li>Notificaciones</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <h1 class="title">Entrenador personal</h1>
+        <div class="contentido">
+            <div class="text-section">
+                <p>¿Quieres alcanzar tus metas de forma más rápida y efectiva? Con nuestro servicio de entrenador personal, 
+                    tendrás un plan diseñado exclusivamente para ti, con el acompañamiento y la motivación que necesitas 
+                    en cada paso del camino.</p>
+                <div class="video-en-texto">
+                    <video autoplay loop muted>
+                        <source src="../../img/ENTRENADOR_PERSONAL.mp4" type="video/mp4">
+                        Tu navegador no soporta la reproducción de videos.
+                    </video>
+                </div>
+            </div>
+        </div>
+
+        <div class="contenido"> 
+            <div class="text-section">
+                <h2>¿Qué Incluye?</h2>
+                <ul>
+                    <li>Plan Personalizado de Entrenamiento: Diseñado según tus objetivos, nivel de experiencia y estilo de vida.</li>
+                    <li>Seguimiento Constante: Monitoreo de tu progreso para ajustar y optimizar tus rutinas.</li>
+                    <li>Asesoramiento Nutricional: Consejos prácticos para complementar tu entrenamiento con una dieta equilibrada.</li>
+                    <li>Flexibilidad: Entrena desde casa, al aire libre o en el gimnasio, ¡tú eliges!</li>
+                    <li>Motivación y Apoyo: Supera tus límites con la guía y motivación de un experto.</li>
+                </ul>
+            </div>
+
+            <div class="text-section">
+                <h2>Beneficios de Tener un Entrenador Personal</h2>
+                <ul>
+                    <li>Resultados más rápidos y efectivos.</li>
+                    <li>Reducción del riesgo de lesiones al realizar ejercicios correctamente.</li>
+                    <li>Confianza en cada paso de tu entrenamiento.</li>
+                </ul>
+            </div>
+            
+        </div>
+
+        <div class="trainer-section">
+            <h2>Ponte en contacto con un Entrenador:</h2>
+            <div class="contenido">
+                <div class="trainer-card" onclick="verForm('Juanjo')">
+                    <img src="../../img/entren_juanjo.jpg" alt="Juanjo">
+                    <h3>Juanjo</h3>
+                </div>
+                <div class="trainer-card" onclick="verForm('Marina')">
+                    <img src="../../img/entren_marina.jpg" alt="Marina">
+                    <h3>Marina</h3>
+                </div>
+                <div class="trainer-card" onclick="verForm('Víctor')">
+                    <img src="../../img/entren_victor.jpg" alt="Víctor">
+                    <h3>Víctor</h3>
+                </div>
+            </div>
+        </div>    
+    </div>
+
+    <div class="overlay" id="overlay" onclick="cerrarForm()"></div>
+    <div class="form-container" id="form-container">
+        <h2>Contacto con <span id="trainer-name"></span></h2>
+        <form action="mailto: alguien@algunsitio.com" enctype="text/plain" method="post">
+            <input type="hidden" id="trainer-name" name="trainer" value="">
+
+            <label for="name">Tu Nombre:</label><br>
+            <input type="text" id="name" name="name" required><br><br>
+
+            <label for="email">Tu Correo Electrónico:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="message">Mensaje:</label><br>
+            <textarea id="message" name="message" rows="4" required></textarea><br><br>
+            
+            <div class="botones">
+                <button type="submit" class="form-button" >Enviar</button>
+                <button type="button" class="form-button" onclick="cerrarForm()">Cancelar</button>
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

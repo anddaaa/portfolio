@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tutorial de ejercicios</title>
+    <link rel="stylesheet" href="../../Styles/css_header.css">
+    <link rel="stylesheet" href="../../Styles/css_estandar.css">
+    <link rel="stylesheet" href="../../Styles/css_entren_tuto.css">
+
+    <script defer src="../../Scripts/js_header.js"></script>
+    <script src="../../Scripts/js_entren-tuto.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <a href="../../pagina_principal.html"><img src="../../img/logo.png" height="120" alt="Logo"></a>
+    
+            <div class="menu-item">
+                <a href="#">Preguntas</a>
+                <ul class="submenu">
+                    <li><a href="../preguntas/quien_som.html">Quiénes somos</a></li>
+                     <li><a href="../preguntas/preguntas_frec.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../preguntas/contacta.html">Informanos</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Entrenamiento</a>
+                <ul class="submenu">
+                    <li><a href="../entrenamiento/entren_principi.html">¿Eres principiante?</a></li>
+                    <li><a href="../entrenamiento/entren_planes.html">Planes de entrenamiento</a></li>
+                    <li><a href="../entrenamiento/entren_tuto.html">Ejercicios</a></li>
+                    <li><a href="../entrenamiento/entren_personal.html">Entrenador personal</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Salud</a>
+                <ul class="submenu">
+                    <li><a href="../salud/sal_consejos.html">Consejos</a></li>
+                    <li><a href="../salud/sal_nutricion.html">Nutrición</a></li>
+                    <li><a href="../salud/sal_meditacion.html">Meditación</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="../tienda/tien_prin.html">Tienda</a>
+                <ul class="submenu">
+                    <li><a href="../tienda/tien_ropa.html">Ropa</a></li>
+                    <li><a href="../tienda/tien_suplemento.html">Suplementos</a></li>
+                    <li><a href="../tienda/tien_accesorios.html">Accesorios</a></li> 
+                </ul>
+            </div>
+    
+            <div class="user-icons">
+                <img id="user-icon" src="../../img/user.png" height="50" alt="Usuario" class="icon-trigger">
+                <img id="settings-icon" src="../../img/settings.png" height="50" alt="Configuración" class="icon-trigger">
+            </div>
+            
+            <div id="user-menu" class="slide-out-menu">
+                <ul>
+                    <li>Mi información</li>
+                    <li>Historial entrenamientos</li>
+                    <li>Historial comidas</li>
+                    <li>Amigos</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </div>
+
+            <div id="settings-menu" class="slide-out-menu">
+                <ul>
+                    <li>Configuración de cuenta</li>
+                    <li>Privacidad</li>
+                    <li>Notificaciones</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+    
+    <div>
+        <div class="container">
+            <h1 class="title">Ejercicios</h1>
+            <div class="content">
+                <div class="category">
+                    <h2 class="category-title">Piernas</h2>
+                    <div class="product-list">
+                        <div class="product">
+                            <video autoplay loop muted>
+                                <source src="../../img/quadriceps.mov" type="video/mp4">
+                            </video>
+                            <h2>Leg Press</h2>
+                            <div class="instructions-container">
+                                <button onclick="Instructions('instructions1')">Ver instrucciones <span class="arrow">▼</span></button>
+                                <div id="instructions1" style="display: none;">
+                                    <ol>
+                                        <li>Coloca el peso adecuado en la máquina de prensa de piernas y siéntate.</li>
+                                        <li>Levanta las piernas y planta los pies firmemente en la plataforma. Coloca los pies en una posición cómoda, con los dedos apuntando ligeramente hacia afuera.</li>
+                                        <li>Agarra las asas a los lados, lleva los hombros hacia atrás y activa los abdominales.</li>
+                                        <li>Presiona la plataforma y estira las piernas mientras giras las asas para retirar los pasadores de seguridad.</li>
+                                        <li>Toma aire nuevamente y baja la plataforma doblando las rodillas.</li>
+                                        <li>Mantén la posición inferior por un momento y presiona la plataforma hacia arriba mientras exhalas.</li>
+                                        <li>Una vez que termines, estira las piernas, gira las asas para colocar los pasadores de seguridad y descansa.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>                   
+
+                        <div class="product">
+                            <img src="../../img/entren_glutes.jpg">
+                            <h2>Hip Thrust</h2>
+                            <div class="instructions-container">
+                                <button onclick="Instructions('instructions2')">Ver instrucciones <span class="arrow">▼</span></button>
+                                <div id="instructions2" style="display: none;">
+                                    <ol>
+                                        <li>Siéntate en el suelo y coloca una barra con peso sobre tus caderas.</li>
+                                        <li>Apoya la parte superior de tu espalda contra el borde de un banco plano de gimnasio.</li>
+                                        <li>Dobla las rodillas y planta los pies firmemente en el suelo.</li>
+                                        <li>Coloca las manos sobre la barra y agárrala con firmeza.</li>
+                                        <li>Activa tus abdominales y toma aire.</li>
+                                        <li>Empuja la barra hacia el techo apretando los glúteos y empujando con los talones.</li>
+                                        <li>Haz una pausa en la parte superior y baja las caderas al suelo.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <video autoplay loop muted>
+                                <source src="../../img/calf-raise.mov" type="video/mp4">
+                            </video>
+                            <h2>Seated Calf Raise</h2>
+                            <div class="instructions-container">
+                                <button onclick="Instructions('instructions3')">Ver instrucciones <span class="arrow">▼</span></button>
+                                <div id="instructions3" style="display: none;">
+                                    <ol>
+                                        <li>Carga la máquina, siéntate y ajusta el cojín. Tus muslos deben quedar ajustados, permitiéndote desenganchar el peso extendiendo los tobillos.</li>
+                                        <li>Coloca tus muslos contra el cojín y agarra las manijas firmemente.</li>
+                                        <li>Respira y desengancha el peso flexionando las pantorrillas.</li>
+                                        <li>Coloca la barra de seguridad a un lado y flexiona los tobillos para bajar el peso hasta que sientas un estiramiento en tus pantorrillas.</li>
+                                        <li>Presiona con las bolas de tus pies y flexiona las pantorrillas, exhalando cerca de la parte superior.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>           
+                    </div>
+                </div> 
+
+                    <div class="category">
+                        <h2 class="category-title">Brazos</h2>
+                        <div class="product-list">
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/biceps.mov" type="video/mp4">
+                                </video>
+                                <h2>Bicep Curl</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions4')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions4" style="display: none;">
+                                        <ol>
+                                            <li>Acopla una barra recta a una polea baja.</li>
+                                            <li>Ajusta la carga en la pila de pesas al nivel adecuado.</li>
+                                            <li>Agáchate y sujeta la barra recta de manera uniforme con las palmas hacia arriba.</li>
+                                            <li>Extiende tu cuerpo y da un paso atrás (si es necesario) para levantar el peso de la pila.</li>
+                                            <li>Lleva los hombros hacia atrás, activa los abdominales y mantén los codos pegados a los costados.</li>
+                                            <li>Toma aire y flexiona el peso, manteniendo los codos firmes.</li>
+                                            <li>Levanta el peso hasta que las muñecas estén ligeramente más altas que los codos.</li>
+                                            <li>Mantén la posición superior por un momento y baja el peso lentamente, exhalando mientras lo haces.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>                    
+
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/triceps.mov" type="video/mp4">
+                                </video>
+                                <h2>Empuje de Tríceps con un Brazo</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions5')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions5" style="display: none;">
+                                        <ol>
+                                            <li>Selecciona la carga adecuada, coloca la polea en la posición más alta y acopla una cuerda.</li>
+                                            <li>Sujeta la cuerda con tu mano derecha, coloca tu codo pegado al costado y da un paso hacia atrás.</li>
+                                            <li>Toma una respiración profunda y activa los abdominales.</li>
+                                            <li>Extiende lentamente el brazo y contrae el tríceps.</li>
+                                            <li>Flexiona el brazo mientras exhalas.</li>
+                                            <li>Al terminar, sujeta la cuerda con tu mano izquierda y repite.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h2 class="category-title">Pecho</h2>
+                        <div class="product-list">
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/chest.mov" type="video/mp4">
+                                </video>
+                                <h2>Chest Bench Press</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions6')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions6" style="display: none;">
+                                        <ol>
+                                            <li>Acuéstate en el banco.</li>
+                                            <li>Extiende los brazos y sujeta la barra de manera uniforme, con las manos ligeramente más anchas que el ancho de los hombros.</li>
+                                            <li>Lleva las escápulas hacia atrás y presiónalas contra el banco.</li>
+                                            <li>Arquea la parte baja de la espalda y planta los pies firmemente en el suelo.</li>
+                                            <li>Toma aire, desengancha la barra y colócala sobre tu pecho.</li>
+                                            <li>Inhala nuevamente y baja la barra hasta la parte inferior de tu pecho, tocándola ligeramente.</li>
+                                            <li>Mantén la posición por un momento y presiona la barra hasta que tus codos estén extendidos. Exhala.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/chest_2.mov" type="video/mp4">
+                                </video>
+                                <h2>Chest Fly</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions7')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions7" style="display: none;">
+                                        <ol>
+                                            <li>Toma un par de mancuernas ligeras y siéntate en el borde de un banco plano de gimnasio.</li>
+                                            <li>Coloca las mancuernas sobre tus muslos y recuéstate con cuidado, manteniéndolas cerca de tu cuerpo.</li>
+                                            <li>Extiende los brazos y posiciona las mancuernas sobre tu pecho con las palmas enfrentadas.</li>
+                                            <li>Planta los pies en el suelo y lleva los hombros hacia atrás.</li>
+                                            <li>Toma una respiración.</li>
+                                            <li>Baja los brazos hacia los lados mientras mantienes los hombros estables.</li>
+                                            <li>Desciende hasta que tus brazos estén alineados con tu torso.</li>
+                                            <li>Lleva los brazos hacia adentro, tocando ligeramente las mancuernas sobre tu pecho mientras exhalas.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="category">
+                        <h2 class="category-title">Espalda</h2>
+                        <div class="product-list">
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/lower-back.mov" type="video/mp4">
+                                </video>
+                                <h2>Lower Back Extension</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions8')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions8" style="display: none;">
+                                        <ol>
+                                            <li>Siéntate en una máquina de extensión de espalda con las nalgas contra un cojín.</li>
+                                            <li>Coloca el cojín para los pies justo sobre tus pies.</li>
+                                            <li>El cojín superior debe estar contra la parte superior de tu espalda.</li>
+                                            <li>Ajusta la carga en la máquina y cruza los brazos frente a tu pecho.</li>
+                                            <li>Toma aire, activa los abdominales y empuja el cojín superior hacia atrás, activando los músculos de la parte baja de la espalda.</li>
+                                            <li>Mueve varios centímetros y lleva tu cuerpo a la posición superior mientras exhalas.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/upper-back.mov" type="video/mp4">
+                                </video>
+                                <h2>Upper Back Dumbbell Row</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions9')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions9" style="display: none;">
+                                        <ol>
+                                            <li>Toma una mancuerna.</li>
+                                            <li>Coloca tu rodilla derecha y tu mano derecha sobre un banco plano. Mantén tu pierna y brazo izquierdo rectos con la mancuerna en tu mano.</li>
+                                            <li>Lleva tus hombros hacia atrás y activa los abdominales.</li>
+                                            <li>Realiza el remo con la mancuerna hasta que tu codo esté a nivel del torso y aprieta por un momento.</li>
+                                            <li>Mantén la posición por un momento y extiende tu cuerpo mientras exhalas.</li>
+                                            <li>Toma otra respiración y realiza un crunch, llevando tu codo izquierdo hacia tu rodilla derecha.</li>
+                                            <li>Sigue alternando hasta completar la serie.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="product">
+                                <video autoplay loop muted>
+                                    <source src="../../img/upright-row.mov" type="video/mp4">
+                                </video>
+                                <h2>Upright Row</h2>
+                                <div class="instructions-container">
+                                    <button onclick="Instructions('instructions10')">Ver instrucciones <span class="arrow">▼</span></button>
+                                    <div id="instructions10" style="display: none;">
+                                        <ol>
+                                            <li>Agarra una barra cargada con un agarre en pronación (palmas mirando hacia atrás). Tus manos deben estar a la altura de los hombros.</li>
+                                            <li>Párate erguido, retrae tus omóplatos, flexiona los abdominales y respira.</li>
+                                            <li>Remolca la barra en línea recta desde tus caderas hasta tu pecho.</li>
+                                            <li>Aprieta la parte superior de tu espalda y los bíceps en la parte superior y mantén por un momento. </li>
+                                            <li>Extiende los brazos lentamente y exhala mientras bajas.</li>
+                                        </ol>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                <div class="category">
+                    <h2 class="category-title">Abdominales</h2>
+                    <div class="product-list">
+                        <div class="product">
+                            <video autoplay loop muted>
+                                <source src="../../img/abs.mov" type="video/mp4">
+                            </video>
+                            <h2>Bicycle Crunch Raised Legs</h2>
+                            <div class="instructions-container">
+                                <button onclick="Instructions('instructions11')">Ver instrucciones <span class="arrow">▼</span></button>
+                                <div id="instructions11" style="display: none;">
+                                    <ol>
+                                        <li>Acuéstate en el suelo, levanta las piernas del suelo y extiéndelas en el aire.</li>
+                                        <li>Coloca las yemas de los dedos detrás de tu cabeza o cuello.</li>
+                                        <li>Toma una respiración, activa tu abdomen y realiza un crunch con la parte superior de tu cuerpo.</li>
+                                        <li>Gira la parte superior de tu cuerpo, llevando tu codo derecho hacia tu pierna izquierda. Simultáneamente, dobla tu rodilla izquierda y acércala al codo contrario.</li>
+                                        <li>Baja el peso manteniendo los hombros en su lugar y exhala.</li>
+                                        <li>Una vez terminado, toma la mancuerna con la mano contraria, coloca tu mano y rodilla izquierda en el banco, y repite.</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                        </div>
+
+                        <div class="product">
+                            <video autoplay loop muted>
+                                <source src="../../img/abs_2.mov" type="video/mp4">
+                            </video>
+                            <h2>Knee Raise Parallel Bars</h2>
+                            <div class="instructions-container">
+                                <button onclick="Instructions('instructions12')">Ver instrucciones <span class="arrow">▼</span></button>
+                                <div id="instructions12" style="display: none;">
+                                    <ol>
+                                        <li>Ponte dentro de una silla romana (captain's chair) con los pies sobre una plataforma o escalones, la espalda apoyada contra el cojín y los antebrazos planos sobre las barras paralelas acolchadas.</li>
+                                        <li>Lleva los hombros hacia atrás, contrae los abdominales y toma una respiración.</li>
+                                        <li>Baja de la plataforma o escalones y sostente usando la musculatura de la parte superior del cuerpo. Mantén los hombros en su posición y evita encorvarte.</li>
+                                        <li>Toma otra respiración y activa los abdominales para levantar las rodillas lo más alto posible en un movimiento fluido. Mantén la posición superior por un momento.</li>
+                                        <li>Baja las rodillas a la posición inicial, extendiéndolas en el descenso, y detente antes de que la parte baja de tu espalda comience a arquearse. Exhala.</li>
+                                    </ol>
+                                </div>    
+                            </div>
+                        </div>
+                    </div>                
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

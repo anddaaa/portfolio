@@ -1,0 +1,178 @@
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagina Principal</title>
+    
+    <link rel="stylesheet" href="Styles/css_estandar.css">
+    <link rel="stylesheet" href="Styles/css_tienda.css">
+    <link rel="stylesheet" href="Styles/css_header.css">
+
+    <script defer src="Scripts/js_header.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <a href="html/principal/pagina_principal.html"><img src="img/logo.png" height="120" alt="Logo"></a>
+    
+            <div class="menu-item">
+                <a href="#">Preguntas</a>
+                <ul class="submenu">
+                    <li><a href="html/preguntas/quien_som.html">Quiénes somos</a></li>
+                     <li><a href="html/preguntas/preguntas_frec.html">Preguntas Frecuentes</a></li>
+                    <li><a href="html/preguntas/contacta.html">Informanos</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Entrenamiento</a>
+                <ul class="submenu">
+                    <li><a href="html/entrenamiento/entren_principi.html">¿Eres principiante?</a></li>
+                    <li><a href="html/entrenamiento/entren_planes.html">Planes de entrenamiento</a></li>
+                    <li><a href="html/entrenamiento/entren_tuto.html">Ejercicios</a></li>
+                    <li><a href="html/entrenamiento/entren_personal.html">Entrenador personal</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Salud</a>
+                <ul class="submenu">
+                    <li><a href="html/salud/sal_consejos.html">Consejos</a></li>
+                    <li><a href="html/salud/sal_nutricion.html">Nutrición</a></li>
+                    <li><a href="html/salud/sal_meditacion.html">Meditación</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="html/tienda/tien_prin.html">Tienda</a>
+                <ul class="submenu">
+                    <li><a href="html/tienda/tien_ropa.html">Ropa</a></li>
+                    <li><a href="html/tienda/tien_suplemento.html">Suplementos</a></li>
+                    <li><a href="html/tienda/tien_accesorios.html">Accesorios</a></li> 
+                </ul>
+            </div>
+    
+            <div class="user-icons">
+                <img id="user-icon" src="img/user.png" height="50" alt="Usuario" class="icon-trigger">
+                <img id="settings-icon" src="img/settings.png" height="50" alt="Configuración" class="icon-trigger">
+            </div>
+            
+            <div id="user-menu" class="slide-out-menu">
+                <ul>
+                    <li>Mi información</li>
+                    <li>Historial entrenamientos</li>
+                    <li>Historial comidas</li>
+                    <li>Amigos</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </div>
+
+            <div id="settings-menu" class="slide-out-menu">
+                <ul>
+                    <li>Configuración de cuenta</li>
+                    <li>Privacidad</li>
+                    <li>Notificaciones</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    
+
+
+    <div class="container">
+        <div class="content-h">
+            <div class="video-section">
+                <video autoplay loop muted>
+                    <source src="img/QUIENES_SOMOS.mp4" type="video/mp4">
+                    Tu navegador no soporta la reproducción de videos.
+                </video>
+                <a href="html/entrenamiento/entren_tuto.html" class="titulo-a-otra">ACCEDE A LOS EJERCICIOS QUE NECESITES</a>
+            </div>
+
+            <div class="text-section">
+                <h2>¿EN QUE TE PUEDE AYUDAR ENTRENAR?</h2>
+                <p>El entrenamiento físico tiene un impacto significativo en la salud mental. Proporciona beneficios tangibles en estado de animo, capacidad cognitiva y adaptabilidad emocional.</p>
+                <a href="html/salud/sal_consejos.html">Leer mas de salud mental</a>
+            </div>
+        </div>
+        
+
+        <div class="product-section">
+            <a href="html/tienda/tien_prin.html" class="titulo-a-otra">ACCEDE A NUSTRA TIENDA</a>
+
+            <div class="product-list">
+                <div class="product">
+                    <img src="img/suplemento 3.webp">
+                    <a href="https://gymbeam.com/protein-break-bar-gymbeam.html">
+                        <h2>Barra de proteinas</h2>
+                    </a>
+                    <p>3 unidades, chocolate con leche</p>
+                    <p class="price">€2.50</p>
+                </div>
+
+                <div class="product">
+                    <img src="img/accesorio 4.jpg">
+                    <a href="https://www.technogym.com/en-RO/product/loop-bands_A0001132.html">
+                        <h2>Bandas Elásticas</h2>
+                    </a>
+                    <p>3 piezas</p>
+                    <p class="price">€35</p>
+                </div>
+
+                <div class="product">
+                    <img src="img/t-shirt 2.avif" alt="T-shirt women">
+                    <div class="color-options">
+                        <div class="color-option sage"></div>
+                    </div>
+                    <a href="https://www.myprotein.com/p/sports-clothing/mp-women-s-velocity-oversized-t-shirt-warm-sage/15035033/">
+                        <h2>Camiseta mujeres</h2>
+                    </a>
+                    <p>Tacto suave</p>
+                    <div class="size-options">
+                        <button class="size-option">XS</button>
+                        <button class="size-option">S</button>
+                        <button class="size-option">M</button>
+                        <button class="size-option">L</button>
+                        <button class="size-option">XL</button>
+                    </div>
+                    <p class="price">€12.99</p>
+                </div>
+
+                <div class="product">
+                    <img src="img/suplemento 6.webp">
+                    <a href="https://gymbeam.com/vitamin-d3-k1-k2-forte-gymbeam.html">
+                        <h2>Vitamina D3+K1+K2 Forte</h2>
+                    </a>
+                    <p>120 capsulas</p>
+                    <p class="price">€13.95</p>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div class="content-h">
+            <div class="text-section">
+                <h2>ENCUENTRA TU PLAN PERFECTO</h2>
+                <p>Encontrar un buen plan de entrenamiento es clave si quieres alcanzar tus objetivos de manera 
+                    eficiente y segura. Te ayudara a evitar lesiones, mantener la motivación y garantizar que 
+                    cada sesión esté alineada con tus metas específicas.</p>
+                    <a href="html/entrenamiento/entren_planes.html">Lee mas sobre tu plan ideal</a>
+            </div>
+
+            <div class="text-section">
+                <h2>PLANIFICA CON TU ENTRENADOR</h2>
+                <p>Para una persona principiante, resultara de gran ayuda tener un entrenador que 
+                    planifique tus entrenamientos según tus objetivos y necesidades.</p>
+                <a href="html/entrenamiento/entren_personal.html">Encuentra a tu entrenador</a>
+            </div>
+
+        </div>
+    </div>
+    
+
+
+</body>
+</html>
