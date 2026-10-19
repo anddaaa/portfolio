@@ -1,0 +1,134 @@
+.contenido {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    margin: 20px 0;
+}
+
+.trainer-section { 
+    text-align: center;
+}
+
+.trainer-card {
+    border: 2px solid #dd4407;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    width: 30%;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.trainer-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(118, 33, 0, 0.2);
+}
+
+.trainer-card img {
+    width: 100%;
+    max-width: 150px;
+    border-radius: 10%;
+}
+
+.trainer-card h3 {
+    margin: 10px 0;
+}
+
+.form-container {
+    display: none;
+    position: fixed;
+    align-items: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(79, 24, 0, 0.2);
+    z-index: 10;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+    width: calc(98% - 10px);
+    padding: 10px;
+    margin-top: 10px;
+    border: 2px solid #901f00;
+    border-radius: 5px;
+    font-size: 14px;
+    box-shadow: 0 4px 6px rgba(104, 48, 2, 0.2);
+
+}
+
+
+
+.form-container.active {
+    display: block;
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+}
+
+.botones{
+    text-align: center;
+}
+.form-button {
+    background-color: #ffffff;
+    color: #FF5722;
+    font-size: 16px;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: 10px 5px;
+    transition: color 0.5s;
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+.form-button:hover {
+    background-color: #FF5722;
+    color: #ffffff;
+}
+
+.overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(87, 45, 25, 0.5);
+    z-index: 5;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.video-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-section video {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .video-section {
+        margin-top: 20px;
+    }
+}

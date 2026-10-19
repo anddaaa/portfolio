@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Graphic design &amp; 3D modelling | Anda Oltean</title>
+  <meta name="description" content="A design book taken from first sketch to a textured 3D character and room, made for the Graphic Design course.">
+  <meta property="og:title" content="Graphic design &amp; 3D modelling | Anda Oltean">
+  <meta property="og:description" content="A design book taken from first sketch to a textured 3D character and room, made for the Graphic Design course.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23cebabb'/%3E%3Cpath d='M18 46 46 18M24 18h22v22' fill='none' stroke='%23000' stroke-width='7' stroke-linecap='square'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Spacing & Organization Overrides */
+    .project-container {
+      max-width: 58rem;
+      margin: 0 auto;
+      padding: clamp(6rem, 11vw, 8rem) 0 4rem;
+    }
+
+    .project-header-block {
+      margin-bottom: 3rem;
+      margin-top: -0.5rem;
+    }
+
+    .project-header-block .display {
+      margin-bottom: 1rem;
+    }
+
+    /* Stack meta groups into separate lines */
+    .project-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .project-meta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* Top navigation pills with beige hover */
+    .bar__nav .pill {
+      background: transparent;
+      border-color: transparent;
+      color: var(--ink);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .bar__nav .pill.is-active,
+    .bar__nav .pill:hover {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--muted);
+    }
+
+    /* Tag Styling matching the Phase 01 badge background */
+    .tag {
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.05);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .software__label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-right: 0.25rem;
+    }
+
+    .tag--solid {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--ink);
+    }
+
+    .project-lead-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 60ch;
+      color: var(--ink);
+      margin-top: 1.5rem;
+    }
+
+    /* Main Featured Showcase Section */
+    .showcase-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .showcase-featured {
+      width: 100%;
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+
+    .showcase-featured img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    /* Brief / Notes Cards Section */
+    .project-summary-boxes {
+      margin-bottom: 4rem;
+    }
+
+    /* Process Section Spacing */
+    .more-process-wrapper {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .process-track-title {
+      font-size: 1.4rem;
+      font-family: var(--display, serif);
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--mauve, #a89a8d);
+      color: var(--ink);
+    }
+
+    .stage-card {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .stage-card:last-child {
+      border-bottom: none;
+    }
+
+    .stage-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .stage-badge {
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(0,0,0,0.05);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    /* Photo galleries: every row has the same height, images are never cropped.
+       --ar (per image) and --maxsum (per gallery) are the aspect ratios; --hmax caps the row height. */
+    .gallery {
+      container-type: inline-size;
+      width: 100%;
+      max-width: var(--gmax, 48rem);
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .gallery__row {
+      --h: min(var(--hmax, 300px), calc((100cqw - var(--gaps, 0.35rem)) / var(--maxsum, 2)));
+      display: flex;
+      justify-content: center;
+      gap: 0.35rem;
+      width: 100%;
+    }
+
+    .gallery__row a {
+      display: block;
+      flex: 0 0 auto;
+      height: var(--h);
+      aspect-ratio: var(--ar);
+    }
+
+    .gallery__row img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .gallery--pair { --gmax: 36rem; }
+
+    .stage-single-img {
+      max-width: 32rem;
+      margin: 0 auto;
+    }
+
+    .stage-single-img img {
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      display: block;
+    }
+
+    @media (max-width: 600px) {
+      /* three wide images are too small side by side on a phone: stack them at equal width */
+      .gallery--3 .gallery__row { flex-direction: column; align-items: center; }
+      .gallery--3 .gallery__row a { width: 100%; max-width: 26rem; height: auto; }
+    }
+
+    /* Project Navigation */
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .proj-nav__next {
+      margin-left: auto;
+    }
+    .proj-nav .pill { max-width: 48%; flex: 0 1 auto; }
+    @media (max-width: 480px) {
+      .proj-nav .pill { font-size: 0.72rem; padding: 0.3rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Arrow icon used across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arrow" viewBox="0 0 24 24">
+    <path d="M4.5 19.5 19.5 4.5M7.5 4.5h12v12" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter"/>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <nav class="bar__nav" aria-label="Main">
+    <a class="pill" href="../index.html#about">introduction</a>
+    <a class="pill" href="../index.html#skills">skills</a>
+    <a class="pill" href="../index.html#projects">projects</a>
+    <a class="pill" href="../index.html#experience">experience</a>
+    <a class="pill" href="../index.html#contact">contact</a>
+  </nav>
+</header>
+
+<main id="top" class="project-container">
+  <p class="crumb" style="margin: 0 0 0.2rem;"><a class="pill" href="../index.html#projects">&larr; all projects</a></p>
+
+  <article class="panel project" id="design">
+
+    <!-- Header Section -->
+    <header class="project-header-block">
+      <h1 class="display h-lg" style="margin-top: 0;">Graphic design &amp; 3D modelling</h1>
+
+      <div class="project-meta">
+        <div class="project-meta-group">
+          <span class="tag">character design</span>
+          <span class="tag">3D modelling</span>
+          <span class="tag">animation</span>
+        </div>
+        <div class="project-meta-group">
+          <span class="software__label">software:</span>
+          <span class="tag tag--solid">GIMP</span>
+          <span class="tag tag--solid">Blender</span>
+        </div>
+      </div>
+
+      <p class="project-lead-text">
+        My design book for the Graphic Design course: a steampunk female dwarf for a children's tale, 
+        developed from initial sketches to textured 3D models of the character and her room, and brought 
+        to life in a final animation of the character in her room.
+      </p>
+    </header>
+
+    <!-- Main Showcase -->
+    <section class="showcase-grid">
+      <div class="showcase-featured">
+        <a href="../assets/projects/design/04-modelsheet.jpg" target="_blank" rel="noopener" aria-label="Open model sheet full size">
+          <img src="../assets/projects/design/04-modelsheet.jpg" alt="Model sheet of the steampunk character" loading="lazy" decoding="async">
+        </a>
+      </div>
+
+      <div class="gallery gallery--pair" style="--maxsum:2.105; --hmax:300px; --gaps:0.35rem">
+        <div class="gallery__row">
+          <a style="--ar:1.425" href="../assets/projects/design/09-room-materials-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/09-room-materials-2.jpg" alt="3D render of a steampunk room" loading="lazy" decoding="async"></a>
+          <a style="--ar:0.680" href="../assets/projects/design/11-character-textures-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/11-character-textures-1.jpg" alt="Textured 3D model of the character" loading="lazy" decoding="async"></a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Brief / Summary Cards -->
+    <section class="boxes boxes--3 project-summary-boxes">
+      <div class="box">
+        <h3>the brief</h3>
+        <p>A character for a children's tale: female, dwarf, steampunk. I designed her in 2D, then built her and a matching room in 3D.</p>
+      </div>
+      <div class="box">
+        <h3>the process</h3>
+        <p>Sketch, ink, colour and model sheet in 2D. Then furniture and room blocked out in Blender, the character modelled, and materials and textures added to both.</p>
+      </div>
+      <div class="box">
+        <h3>the result</h3>
+        <p>A complete character and room design from first sketch to textured 3D models, finished with an animation of the character in her room.</p>
+      </div>
+    </section>
+
+    <!-- Full Process Section -->
+    <div class="more-process-wrapper">
+      <div style="padding-top: 1rem;">
+        <h3 class="sub" style="margin-bottom: 0.5rem;">the full design book</h3>
+        <p class="more__lead" style="margin-bottom: 3rem;">Twelve phases following the journey from initial 2D sketches to 3D character and room modelling, ending with an animation of the character in her room.</p>
+
+        <div class="stages">
+
+          <!-- TRACK 1: CHARACTER CREATION -->
+          <h3 class="process-track-title">Part 1: Character Design (2D to 3D)</h3>
+
+          <!-- Phase 01 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 01</span> Sketching</h4>
+            <div class="stage-single-img">
+              <a href="../assets/projects/design/01-sketch.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/01-sketch.jpg" alt="Pencil sketch of the character" loading="lazy" decoding="async"></a>
+            </div>
+          </div>
+
+          <!-- Phase 02 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 02</span> Inking</h4>
+            <div class="stage-single-img">
+              <a href="../assets/projects/design/02-ink.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/02-ink.jpg" alt="Inked line art of the character" loading="lazy" decoding="async"></a>
+            </div>
+          </div>
+
+          <!-- Phase 03 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 03</span> Painting</h4>
+            <div class="stage-single-img">
+              <a href="../assets/projects/design/03-color.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/03-color.jpg" alt="Painted character in colour" loading="lazy" decoding="async"></a>
+            </div>
+          </div>
+
+          <!-- Phase 04 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 04</span> Model Sheet</h4>
+            <div class="stage-single-img">
+              <a href="../assets/projects/design/04-modelsheet.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/04-modelsheet.jpg" alt="Character Model Sheet" loading="lazy" decoding="async"></a>
+            </div>
+          </div>
+
+          <!-- Phase 05 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 05</span> 3D Character Modelling</h4>
+            <div class="gallery gallery--4" style="--maxsum:1.219; --hmax:340px; --gaps:0.35rem">
+              <div class="gallery__row">
+                <a style="--ar:0.564" href="../assets/projects/design/08-character-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/08-character-1.jpg" alt="3D character model three-quarter view" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.542" href="../assets/projects/design/08-character-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/08-character-2.jpg" alt="3D character model other three-quarter view" loading="lazy" decoding="async"></a>
+              </div>
+              <div class="gallery__row">
+                <a style="--ar:0.517" href="../assets/projects/design/08-character-3.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/08-character-3.jpg" alt="3D character model side view" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.702" href="../assets/projects/design/08-character-4.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/08-character-4.jpg" alt="3D character model front view" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 06 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 06</span> Character Materials &amp; Textures</h4>
+            <div class="gallery gallery--4" style="--maxsum:1.201; --hmax:340px; --gaps:0.35rem">
+              <div class="gallery__row">
+                <a style="--ar:0.680" href="../assets/projects/design/11-character-textures-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/11-character-textures-1.jpg" alt="Textured 3D character front view" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.521" href="../assets/projects/design/11-character-textures-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/11-character-textures-2.jpg" alt="Textured 3D character side view" loading="lazy" decoding="async"></a>
+              </div>
+              <div class="gallery__row">
+                <a style="--ar:0.579" href="../assets/projects/design/11-character-textures-3.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/11-character-textures-3.jpg" alt="Textured 3D character three-quarter view" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.578" href="../assets/projects/design/11-character-textures-4.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/11-character-textures-4.jpg" alt="Textured 3D character other three-quarter view" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+
+          <!-- TRACK 2: ROOM & ENVIRONMENT CREATION -->
+          <h3 class="process-track-title">Part 2: Room &amp; Environment Design</h3>
+
+          <!-- Phase 07 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 07</span> Furniture (First Version)</h4>
+            <div class="gallery gallery--4" style="--maxsum:2.740; --hmax:240px; --gaps:0.35rem">
+              <div class="gallery__row">
+                <a style="--ar:1.646" href="../assets/projects/design/05-blockout-table.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/05-blockout-table.jpg" alt="Low-poly coffee table" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.094" href="../assets/projects/design/05-blockout-chair.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/05-blockout-chair.jpg" alt="Low-poly curved chair" loading="lazy" decoding="async"></a>
+              </div>
+              <div class="gallery__row">
+                <a style="--ar:0.793" href="../assets/projects/design/05-blockout-lamp.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/05-blockout-lamp.jpg" alt="Low-poly pipe lamp" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.973" href="../assets/projects/design/05-blockout-gear.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/05-blockout-gear.jpg" alt="Low-poly decorative gear" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 08 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 08</span> Furniture (Refined)</h4>
+            <div class="gallery gallery--4" style="--maxsum:3.099; --hmax:240px; --gaps:0.35rem">
+              <div class="gallery__row">
+                <a style="--ar:1.966" href="../assets/projects/design/06-refined-table.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/06-refined-table.jpg" alt="Refined coffee table" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.133" href="../assets/projects/design/06-refined-chair.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/06-refined-chair.jpg" alt="Refined curved chair" loading="lazy" decoding="async"></a>
+              </div>
+              <div class="gallery__row">
+                <a style="--ar:0.838" href="../assets/projects/design/06-refined-lamp.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/06-refined-lamp.jpg" alt="Refined pipe lamp" loading="lazy" decoding="async"></a>
+                <a style="--ar:0.873" href="../assets/projects/design/06-refined-gear.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/06-refined-gear.jpg" alt="Refined gear with teeth" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 09 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 09</span> Room Blockout</h4>
+            <div class="gallery gallery--4" style="--maxsum:3.234; --hmax:240px; --gaps:0.35rem">
+              <div class="gallery__row">
+                <a style="--ar:1.879" href="../assets/projects/design/07-room-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/07-room-1.jpg" alt="Untextured room front view" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.356" href="../assets/projects/design/07-room-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/07-room-2.jpg" alt="Wall with gears and counter" loading="lazy" decoding="async"></a>
+              </div>
+              <div class="gallery__row">
+                <a style="--ar:1.400" href="../assets/projects/design/07-room-3.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/07-room-3.jpg" alt="Sofa, table and chair view" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.681" href="../assets/projects/design/07-room-4.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/07-room-4.jpg" alt="Room seen from above" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 10 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 10</span> Room Materials</h4>
+            <div class="gallery gallery--3" style="--maxsum:4.607; --hmax:220px; --gaps:0.7rem">
+              <div class="gallery__row">
+                <a style="--ar:1.887" href="../assets/projects/design/09-room-materials-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/09-room-materials-1.jpg" alt="Room with first materials applied" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.425" href="../assets/projects/design/09-room-materials-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/09-room-materials-2.jpg" alt="Gear wall with materials" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.295" href="../assets/projects/design/09-room-materials-3.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/09-room-materials-3.jpg" alt="Lounge corner with materials" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Phase 11 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 11</span> Room Textures</h4>
+            <div class="gallery gallery--3" style="--maxsum:4.677; --hmax:220px; --gaps:0.7rem">
+              <div class="gallery__row">
+                <a style="--ar:1.776" href="../assets/projects/design/10-room-textures-1.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/10-room-textures-1.jpg" alt="Room with textures wide view" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.713" href="../assets/projects/design/10-room-textures-2.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/10-room-textures-2.jpg" alt="Room close-up of pink sofa" loading="lazy" decoding="async"></a>
+                <a style="--ar:1.188" href="../assets/projects/design/10-room-textures-3.jpg" target="_blank" rel="noopener"><img src="../assets/projects/design/10-room-textures-3.jpg" alt="Textured lounge corner" loading="lazy" decoding="async"></a>
+              </div>
+            </div>
+          </div>
+
+          <!-- TRACK 3: FINAL ANIMATION -->
+          <h3 class="process-track-title">Part 3: Final Animation</h3>
+
+          <!-- Phase 12: Character Animation -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Phase 12</span> Character Animation</h4>
+            <div class="stage-video" style="max-width: 44rem; margin: 0 auto;">
+              <video controls preload="metadata" playsinline style="display:block; width:100%; height:auto; border-radius:10px; background:#000;">
+                <source src="../assets/projects/design/animacion.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+        </div>
+
+        <p class="more__actions" style="margin-top: 3.5rem;">
+          <a class="pill pill--solid" href="../documents/design-book.pdf" download>download the design book (PDF) <svg aria-hidden="true"><use href="#arrow"/></svg></a>
+        </p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project Navigation -->
+  <nav class="proj-nav" aria-label="Other projects" style="margin-top: 4rem;">
+    <a class="pill proj-nav__prev" href="ka.html">&larr; KA Social Studio</a>
+    <a class="pill proj-nav__next" href="audiovisual.html">Audiovisual Editing &amp; Postproduction &rarr;</a>
+  </nav>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Audiovisual Editing &amp; Postproduction | Anda Oltean</title>
+  <meta name="description" content="A collection of cinematic video edits, cuts, tracking, and postproduction work from my university studies at the Polytechnic University of Valencia.">
+  <meta property="og:title" content="Audiovisual Editing &amp; Postproduction | Anda Oltean">
+  <meta property="og:description" content="A collection of cinematic video edits, cuts, tracking, and postproduction work from my university studies at the Polytechnic University of Valencia.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23cebabb'/%3E%3Cpath d='M18 46 46 18M24 18h22v22' fill='none' stroke='%23000' stroke-width='7' stroke-linecap='square'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Open+Sans:wght@400;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Spacing & Organization Overrides matching design.html and beatit.html */
+    .project-container {
+      max-width: 58rem;
+      margin: 0 auto;
+      padding: clamp(6rem, 11vw, 8rem) 0 4rem;
+    }
+
+    .project-header-block {
+      margin-bottom: 3rem;
+      margin-top: -0.5rem;
+    }
+
+    .project-header-block .display {
+      margin-bottom: 1rem;
+    }
+
+    /* Stack meta groups into separate lines */
+    .project-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .project-meta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bar__nav .pill {
+      background: transparent;
+      border-color: transparent;
+      color: var(--ink);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .bar__nav .pill.is-active,
+    .bar__nav .pill:hover {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--muted);
+    }
+
+    .tag {
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.05);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .software__label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-right: 0.25rem;
+    }
+
+    .tag--solid {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--ink);
+    }
+
+    .project-lead-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 60ch;
+      color: var(--ink);
+      margin-top: 1.5rem;
+    }
+
+    .showcase-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+      margin-bottom: 4rem;
+    }
+
+    .showcase-featured {
+      width: 100%;
+      max-width: 44rem;
+      margin: 0 auto;
+    }
+
+    .showcase-featured img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .project-summary-boxes {
+      margin-bottom: 4rem;
+    }
+
+    .more-process-wrapper {
+      margin-top: 3.5rem;
+      padding-top: 2rem;
+      border-top: 1px solid rgba(0, 0, 0, 0.12);
+    }
+
+    .process-track-title {
+      font-size: 1.4rem;
+      font-family: var(--display, serif);
+      margin: 2.5rem 0 1.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid var(--mauve, #a89a8d);
+      color: var(--ink);
+    }
+
+    .stage-card {
+      margin-bottom: 3.5rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+    }
+
+    .stage-card:last-child {
+      border-bottom: none;
+    }
+
+    .stage-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .stage-badge {
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(0,0,0,0.05);
+      padding: 0.2rem 0.6rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .video-box {
+      aspect-ratio: 16 / 9;
+      width: 100%;
+      margin: 0 0 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px dashed rgba(0,0,0,0.2);
+      border-radius: 10px;
+      background: rgba(0,0,0,0.03);
+      color: var(--muted);
+      font-size: 0.9rem;
+      overflow: hidden;
+    }
+    .video-box:has(video) { border: none; background: #000; }
+    .video-box video { display: block; width: 100%; height: 100%; object-fit: contain; }
+
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .proj-nav__next {
+      margin-left: auto;
+    }
+    .proj-nav .pill { max-width: 48%; flex: 0 1 auto; }
+    @media (max-width: 480px) {
+      .proj-nav .pill { font-size: 0.72rem; padding: 0.3rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Arrow icon used across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arrow" viewBox="0 0 24 24">
+    <path d="M4.5 19.5 19.5 4.5M7.5 4.5h12v12" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter"/>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <nav class="bar__nav" aria-label="Main">
+    <a class="pill" href="../index.html#about">introduction</a>
+    <a class="pill" href="../index.html#skills">skills</a>
+    <a class="pill" href="../index.html#projects">projects</a>
+    <a class="pill" href="../index.html#experience">experience</a>
+    <a class="pill" href="../index.html#contact">contact</a>
+  </nav>
+</header>
+
+<main id="top" class="project-container">
+  <p class="crumb" style="margin: 0 0 0.2rem;"><a class="pill" href="../index.html#projects">&larr; all projects</a></p>
+
+  <article class="panel project" id="audiovisual">
+
+    <!-- Header Section -->
+    <header class="project-header-block">
+      <h1 class="display h-lg" style="margin-top: 0;">Audiovisual Editing &amp; Postproduction</h1>
+
+      <div class="project-meta">
+        <div class="project-meta-group">
+          <span class="tag">video editing</span>
+          <span class="tag">point tracking</span>
+          <span class="tag">camera tracking</span>
+          <span class="tag">VFX</span>
+        </div>
+        <div class="project-meta-group">
+          <span class="software__label">software:</span>
+          <span class="tag tag--solid">Blender Video Editing</span>
+        </div>
+      </div>
+
+      <p class="project-lead-text">
+        A collection of practical exercises and cinematic video editing assignments from my university studies,
+        exploring editing, aesthetic storytelling, motion tracking and CGI integration.
+        This page is still growing: more projects will be added throughout this semester.
+      </p>
+    </header>
+
+    <!-- Main Showcase -->
+    <section class="showcase-grid">
+      <div class="showcase-featured">
+        <img src="../assets/projects/postau/cover.png" alt="Video editor timeline workspace preview" loading="lazy" decoding="async">
+      </div>
+    </section>
+
+    <!-- Brief / Summary Cards -->
+    <section class="boxes boxes--3 project-summary-boxes">
+      <div class="box">
+        <h3>the objective</h3>
+        <p>Learn dynamic video editing and motion tracking.</p>
+      </div>
+      <div class="box">
+        <h3>the workflow</h3>
+        <p>Plan, film my own footage, then track and edit it in postproduction.</p>
+      </div>
+      <div class="box">
+        <h3>the techniques</h3>
+        <p>Single-point, 4-point, camera and object tracking with 3D elements.</p>
+      </div>
+    </section>
+
+    <!-- Detailed Exercises Section -->
+    <div class="more-process-wrapper">
+      <div style="padding-top: 1rem;">
+        <h3 class="sub" style="margin-bottom: 0.5rem;">practical assignments &amp; exercises</h3>
+        <p class="more__lead" style="margin-bottom: 3rem;">Breakdown of the video editing and tracking assignments completed so far.</p>
+
+        <div class="stages">
+
+          <!-- Exercise 1 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Task 01</span> Video Editor &amp; Cinematic Cut</h4>
+            <div class="video-box"><span>video coming soon</span></div>
+            <p>An edit of my trip to China. Each clip is introduced by an animated sticker.</p>
+          </div>
+
+          <!-- Exercise 2 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Task 02</span> Single-Point Tracking</h4>
+            <div class="video-box"><span>video coming soon</span></div>
+            <p>A video of a red traffic light with the camera crossing the street. Instead of the usual pedestrian figure, there is an animation I made, which follows the light using single-point tracking.</p>
+          </div>
+
+          <!-- Exercise 3 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Task 03</span> 4-Point Tracking</h4>
+            <div class="video-box"><span>video coming soon</span></div>
+            <p>Tracking four points on a flat surface, such as a screen, to attach a virtual element to it.</p>
+          </div>
+
+          <!-- Exercise 4 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Task 04</span> Camera Tracking</h4>
+            <div class="video-box"><span>video coming soon</span></div>
+            <p>Tracking the camera movement of a shot so a 3D element sits naturally in the real scene.</p>
+          </div>
+
+          <!-- Exercise 5 -->
+          <div class="stage-card">
+            <h4 class="stage-title"><span class="stage-badge">Task 05</span> Object Tracking &amp; Replacement</h4>
+            <div class="video-box"><span>video coming soon</span></div>
+            <p>Tracking a moving object and replacing it with a virtual one.</p>
+          </div>
+
+        </div>
+
+        <p class="more__lead" style="margin-top: 1rem;">More projects are coming this semester. This page will be updated as I complete them.</p>
+      </div>
+    </div>
+  </article>
+
+  <!-- Project Navigation -->
+  <nav class="proj-nav" aria-label="Other projects" style="margin-top: 4rem;">
+    <a class="pill proj-nav__prev" href="design.html">&larr; Graphic design &amp; 3D</a>
+    <a class="pill proj-nav__next" href="beatit.html">Beat It &rarr;</a>
+  </nav>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

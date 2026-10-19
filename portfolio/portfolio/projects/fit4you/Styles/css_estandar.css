@@ -1,0 +1,183 @@
+html, body {
+    height: 100%; /* Pagina ocupa toda pantalla */
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden; /* No desplazamiento horizonta, para no ver el bloque del menu deslizante*/
+    background-color: #f4f4f4;
+}
+
+/*El contenido principal ocupa al menos toda la altura de la pantalla */
+main {
+    height: 100vh; /* Asegura que el contenido ocupe toda la altura de la pantalla */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+/*CONTENIDOS*/
+.content-h { /*Elemento al lado del otro*/
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+
+
+/*SECCIONES*/
+.video-section {
+    flex: 1;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.video-en-texto{
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    padding: 20px;
+}
+
+
+.text-section {
+    flex: 1;
+    margin: 10px;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.text-section a {
+    color: #0077cc;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.text-section a:hover {
+    color: #0091f9;
+}
+
+.product-section { /*Para pagina inicial*/
+    background-color: #e8ded8;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/*ELEMENTOS DE SECCIONES*/
+.title {
+    color: #702000;
+    font-family: fantasy;
+    font-size: 5ch;
+    font-weight: bold;
+    text-align: left;
+    margin-bottom: 20px;
+}
+.titulo-a-otra{
+    color: #bd3500;
+    font-family: fantasy;
+    font-size: 3ch;
+    font-weight: bold;
+    text-align: left;
+    text-decoration: none;
+}
+.titulo-a-otra:hover{
+    color: #ff4800;
+}
+
+
+/*ELEMENTOS DE PARRAFO*/
+h2 {
+    color: #bd3500;
+    font-family: fantasy;
+    font-size: 3.5ch;
+    font-weight:800c;
+    margin-bottom: 15px;
+}
+
+p {
+    color: #160b08;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 3ch;
+    font-weight: 450;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.highlight {
+    color: #ff0000;
+    font-weight: bold;
+}
+
+.text-section ul {
+    margin: 10px 0;
+    padding-left: 20px;
+}
+
+.text-section ul li {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #000;
+    font-size: 1.4em;
+    margin-bottom: 10px;
+}
+
+
+
+/*ELEMENTOS DE VIDEO*/
+.video-section video {
+    pointer-events: none;
+    width: 100%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+.video-en-texto video {
+    pointer-events: none;
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(97, 29, 2, 0.4);
+}
+
+@media (max-width: 768px) {
+    .content {
+        flex-direction: column;
+    }
+
+    .video-section video {
+        max-width: 100%;
+    }
+}
+
+.image-section {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.image-section img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px;
+    }
+}

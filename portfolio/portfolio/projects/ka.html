@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>KA Social Studio | Anda Oltean</title>
+  <meta name="description" content="Social media content creation, filming, editing, and postproduction.">
+  <meta property="og:title" content="KA Social Studio | Anda Oltean">
+  <meta property="og:description" content="Social media content creation, filming, editing, and postproduction.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23cebabb'/%3E%3Cpath d='M18 46 46 18M24 18h22v22' fill='none' stroke='%23000' stroke-width='7' stroke-linecap='square'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Outfit:wght@700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    /* Spacing & Layout Overrides */
+    .project-container {
+      max-width: 58rem;
+      margin: 0 auto;
+      padding: clamp(6rem, 11vw, 8rem) 0 4rem;
+    }
+
+    .project-header-block {
+      margin-bottom: 3rem;
+      margin-top: -0.5rem;
+    }
+
+    .project-header-block .display {
+      margin-bottom: 1rem;
+    }
+
+    .project-meta {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      align-items: flex-start;
+      margin: 1.5rem 0 2rem;
+    }
+
+    .project-meta-group {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .bar__nav .pill {
+      background: transparent;
+      border-color: transparent;
+      color: var(--ink);
+      transition: background 0.2s ease, color 0.2s ease;
+    }
+
+    .bar__nav .pill.is-active,
+    .bar__nav .pill:hover {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--muted);
+    }
+
+    .tag {
+      font-family: var(--body);
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--muted);
+      background: rgba(0, 0, 0, 0.05);
+      padding: 0.35rem 0.75rem;
+      border-radius: 6px;
+      letter-spacing: 0.03em;
+      display: inline-block;
+      line-height: 1.2;
+    }
+
+    .software__label {
+      font-size: 0.9rem;
+      font-weight: 700;
+      color: var(--muted);
+      margin-right: 0.25rem;
+    }
+
+    .tag--solid {
+      background: rgba(0, 0, 0, 0.08);
+      color: var(--ink);
+    }
+
+    .project-lead-text {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      max-width: 62ch;
+      color: var(--ink);
+      margin-top: 1.5rem;
+    }
+
+    /* Centered iPhone Frame Mockups Grid */
+    .phone-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 2rem;
+      margin: 3rem auto 4rem;
+      max-width: 54rem;
+      justify-content: center;
+    }
+
+    .phone-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centers the content horizontally */
+      text-align: center;  /* Centers the text below */
+      gap: 0.8rem;
+    }
+
+    /* Realistic iPhone Bezel Wrapper */
+    .iphone-frame {
+      width: 100%;
+      aspect-ratio: 9 / 18;
+      background: #111;
+      border-radius: 36px;
+      padding: 12px;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.12);
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Phone Screen Content Area */
+    .iphone-screen {
+      flex: 1;
+      background: #fff;
+      border-radius: 26px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      position: relative;
+    }
+
+    /* Simulated Instagram Profile Header Bar */
+    .iphone-header {
+      background: #fafafa;
+      padding: 12px 10px 8px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--ink);
+      letter-spacing: -0.01em;
+      z-index: 2;
+    }
+
+    /* Image Display fitting the whole screen */
+    .iphone-body {
+      flex: 1;
+      overflow: hidden;
+      position: relative;
+      background: #000;
+    }
+
+    .iphone-body img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .phone-card:hover .iphone-body img {
+      transform: scale(1.03);
+    }
+
+    .phone-card__cap {
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: var(--ink);
+      line-height: 1.35;
+      margin-top: 0.5rem;
+    }
+
+    .phone-card__desc {
+      font-size: 0.85rem;
+      color: var(--muted);
+      line-height: 1.45;
+      max-width: 26ch;
+    }
+
+    /* Project Navigation */
+    .proj-nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      width: 100%;
+    }
+    .proj-nav__next {
+      margin-left: auto;
+    }
+    .proj-nav .pill { max-width: 48%; flex: 0 1 auto; }
+
+    @media (max-width: 768px) {
+      .phone-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+        max-width: 18rem;
+      }
+    }
+    @media (max-width: 480px) {
+      .proj-nav .pill { font-size: 0.72rem; padding: 0.3rem 0.7rem; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Arrow icon used across the page -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+  <symbol id="arrow" viewBox="0 0 24 24">
+    <path d="M4.5 19.5 19.5 4.5M7.5 4.5h12v12" fill="none" stroke="currentColor" stroke-width="3.4" stroke-linecap="square" stroke-linejoin="miter"/>
+  </symbol>
+</svg>
+
+<header class="bar">
+  <nav class="bar__nav" aria-label="Main">
+    <a class="pill" href="../index.html#about">introduction</a>
+    <a class="pill" href="../index.html#skills">skills</a>
+    <a class="pill" href="../index.html#projects">projects</a>
+    <a class="pill" href="../index.html#experience">experience</a>
+    <a class="pill" href="../index.html#contact">contact</a>
+  </nav>
+</header>
+
+<main id="top" class="project-container">
+  <p class="crumb" style="margin: 0 0 0.2rem;"><a class="pill" href="../index.html#projects">&larr; all projects</a></p>
+
+  <article class="panel project" id="ka">
+
+    <!-- Header Section -->
+    <header class="project-header-block">
+      <h1 class="display h-lg" style="margin-top: 0;">KA Social Studio</h1>
+
+      <div class="project-meta">
+        <div class="project-meta-group">
+          <span class="tag">social media</span>
+          <span class="tag">content filming</span>
+          <span class="tag">postproduction &amp; editing</span>
+        </div>
+        <div class="project-meta-group">
+          <span class="software__label">software:</span>
+          <span class="tag tag--solid">CapCut</span>
+          <span class="tag tag--solid">Canva</span>
+          <span class="tag tag--solid">Artlist</span>
+          <span class="tag tag--solid">Opus</span>
+        </div>
+      </div>
+
+      <p class="project-lead-text">
+        With over a year and a half of experience in social media, I specialize in content filming, 
+        editing, and post-production. Currently, I am creating short promotional videos for brand marketing 
+        featured on my Instagram page, with more projects on the way.
+      </p>
+
+      <p style="margin-top: 1.5rem;">
+        <a class="pill pill--solid" href="https://www.instagram.com/kasocialstudio/" target="_blank" rel="noopener">
+          visit @kasocialstudio <svg aria-hidden="true"><use href="#arrow"/></svg>
+        </a>
+      </p>
+    </header>
+
+    <!-- Phone Showcase Grid Centered -->
+    <section class="phone-grid">
+      <!-- Item 1: Mono Design -->
+      <div class="phone-card">
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="iphone-body">
+              <img src="../assets/projects/ka/mono-design.jpg" alt="Instagram feed of Mono Design interior studio" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <p class="phone-card__cap">Mono Design Studio</p>
+        <p class="phone-card__desc">Social Media Designer for an Interior Design Studio in Brașov, Romania.</p>
+        <p style="margin-top: 0.3rem;">
+          <a class="pill" href="https://www.instagram.com/mono.designinterior?stkn=MWtnOGxhYTZqcWhiYw%3D%3D" target="_blank" rel="noopener">
+            explore the whole feed <svg aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </p>
+      </div>
+
+      <!-- Item 2: Markus Coenen -->
+      <div class="phone-card">
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="iphone-body">
+              <img src="../assets/projects/ka/markus-coenen.jpg" alt="Instagram feed of Markus Coenen author coach" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <p class="phone-card__cap">Markus Coenen</p>
+        <p class="phone-card__desc">Social Media Manager for an Author Coach (Wirkung im Yes-Modus).</p>
+        <p style="margin-top: 0.3rem;">
+          <a class="pill" href="https://www.instagram.com/markus.coenen?stkn=MWdrb2FyZTJyM3E1NA==" target="_blank" rel="noopener">
+            explore the whole feed <svg aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </p>
+      </div>
+
+      <!-- Item 3: HP Tower One -->
+      <div class="phone-card">
+        <div class="iphone-frame">
+          <div class="iphone-screen">
+            <div class="iphone-body">
+              <img src="../assets/projects/ka/hotel-video.jpg" alt="Hotel presentation video for HP Tower One" loading="lazy" decoding="async">
+            </div>
+          </div>
+        </div>
+        <p class="phone-card__cap">HP Tower One Hotel</p>
+        <p class="phone-card__desc">Hotel presentation video reel capturing the atmosphere and space.</p>
+        <p style="margin-top: 0.3rem;">
+          <a class="pill" href="https://www.instagram.com/reel/DYU0rEhMIRp/?stkn=cDJ2ZWg1c2hxbWp1" target="_blank" rel="noopener">
+            see the whole video <svg aria-hidden="true"><use href="#arrow"/></svg>
+          </a>
+        </p>
+      </div>
+    </section>
+
+  </article>
+
+  <!-- Project Navigation -->
+  <nav class="proj-nav" aria-label="Other projects" style="margin-top: 4rem;">
+    <a class="pill proj-nav__prev" href="syncplay.html">&larr; SyncPlay</a>
+    <a class="pill proj-nav__next" href="design.html">Graphic design &amp; 3D &rarr;</a>
+  </nav>
+</main>
+
+<script src="../script.js"></script>
+</body>
+</html>

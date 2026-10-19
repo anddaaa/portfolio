@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informanos</title>
+    <link rel="stylesheet" href="../../Styles/css_estandar.css">
+    <link rel="stylesheet" href="../../Styles/css_formulario.css">
+    <link rel="stylesheet" href="../../Styles/css_header.css">
+
+    <script defer src="../../Scripts/js_contacta.js"></script>
+    <script defer src="../../Scripts/js_header.js"></script>
+
+</head>
+
+<body>
+    <header>
+        <div class="cabecera">
+            <a href="../../pagina_principal.html"><img src="../../img/logo.png" height="120" alt="Logo"></a>
+    
+            <div class="menu-item">
+                <a href="#">Preguntas</a>
+                <ul class="submenu">
+                    <li><a href="../preguntas/quien_som.html">Quiénes somos</a></li>
+                     <li><a href="../preguntas/preguntas_frec.html">Preguntas Frecuentes</a></li>
+                    <li><a href="../preguntas/contacta.html">Informanos</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Entrenamiento</a>
+                <ul class="submenu">
+                    <li><a href="../entrenamiento/entren_principi.html">¿Eres principiante?</a></li>
+                    <li><a href="../entrenamiento/entren_planes.html">Planes de entrenamiento</a></li>
+                    <li><a href="../entrenamiento/entren_tuto.html">Ejercicios</a></li>
+                    <li><a href="../entrenamiento/entren_personal.html">Entrenador personal</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="#">Salud</a>
+                <ul class="submenu">
+                    <li><a href="../salud/sal_consejos.html">Consejos</a></li>
+                    <li><a href="../salud/sal_nutricion.html">Nutrición</a></li>
+                    <li><a href="../salud/sal_meditacion.html">Meditación</a></li>
+                </ul>
+            </div>
+    
+            <div class="menu-item">
+                <a href="../tienda/tien_prin.html">Tienda</a>
+                <ul class="submenu">
+                    <li><a href="../tienda/tien_ropa.html">Ropa</a></li>
+                    <li><a href="../tienda/tien_suplemento.html">Suplementos</a></li>
+                    <li><a href="../tienda/tien_accesorios.html">Accesorios</a></li> 
+                </ul>
+            </div>
+    
+            <div class="user-icons">
+                <img id="user-icon" src="../../img/user.png" height="50" alt="Usuario" class="icon-trigger">
+                <img id="settings-icon" src="../../img/settings.png" height="50" alt="Configuración" class="icon-trigger">
+            </div>
+            
+            <div id="user-menu" class="slide-out-menu">
+                <ul>
+                    <li>Mi información</li>
+                    <li>Historial entrenamientos</li>
+                    <li>Historial comidas</li>
+                    <li>Amigos</li>
+                    <li>Cerrar sesión</li>
+                </ul>
+            </div>
+
+            <div id="settings-menu" class="slide-out-menu">
+                <ul>
+                    <li>Configuración de cuenta</li>
+                    <li>Privacidad</li>
+                    <li>Notificaciones</li>
+                    <li>Ayuda</li>
+                </ul>
+            </div>
+        </div>
+    </header>
+
+
+    <div class="containerForm">
+        <h1 class="title">¿Tienes alguna duda o problema?</h1>
+        <h2>Informanos:</h2>
+        <form name="finforme" action="mailto: alguien@algunsitio.com" enctype="text/plain" method="post">
+            <fieldset>
+                <legend>Tus datos</legend>
+
+                <input type="radio" id="persona" name="Usuario" value="anónimo" onclick="limpiarYBloquearCelda()" required>
+                <label for="persona">Prefiero que sea anónimo</label><br><br>
+                
+                <input type="radio" id="persona" name="Usuario" value="anónimo" onclick="Habilitar()" required>
+                <label for="persona">Permito mostrar mis datos</label><br><br>
+
+                <label for="nom">Nombre: </label>
+                <input type="text" id="nom" placeholder="Escriba su nombre" size="60" ><br><br>
+
+                <label for="correoe">Correo electrónico: </label>
+                <input type="email" id="correoe" placeholder="Escriba su email" size="60" > <br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>Motivo de consulta</legend>
+
+                <input type="radio" id="op1" name="Motivo" value="duda" onclick="mostrarOpciones('duda')" required>
+                <label for="op1">Tengo una duda</label><br><br>
+
+                <input type="radio" id="op2" name="Motivo" value="error" onclick="mostrarOpciones('error')" required>
+                <label for="op2">Hay un error en la página</label><br><br>
+
+            </fieldset>
+
+            <fieldset id="dudas" class="hidden">
+                <legend>Motivo del informe</legend>
+
+                <input type="radio" id="duda1" name="TipoDuda" value="funcionamiento" required>
+                <label for="duda1">Dudas de funcionamiento</label><br><br>
+
+                <input type="radio" id="duda2" name="TipoDuda" value="salud" required>
+                <label for="duda2">Dudas de salud</label><br><br>
+
+                <input type="radio" id="duda3" name="TipoDuda" value="tienda" required>
+                <label for="duda3">Dudas de tienda</label><br><br>
+
+                <input type="radio" id="duda4" name="TipoDuda" value="entrenamiento" required>
+                <label for="duda4">Dudas de entrenamiento</label><br><br>
+            </fieldset>
+
+            <fieldset id="errores" class="hidden">
+                <legend>Selecciona el tipo de error</legend>
+
+                <input type="radio" id="error1" name="TipoError" value="pagina_inexistente" required>
+                <label for="error1">Página inexistente</label><br><br>
+
+                <input type="radio" id="error2" name="TipoError" value="fallo_carga" required>
+                <label for="error2">Fallo de carga</label><br><br>
+            </fieldset>
+
+            <fieldset>
+                <legend>¿Quiere darnos mas detalles?</legend>
+                <textarea name="comentario" id="coment" rows="7" cols="50"></textarea>
+            </fieldset>
+
+            <input type="submit" value="Enviar">
+            <input type="reset" value="Borrar todo">
+        </form>
+    </div>
+</body>
+</html>
