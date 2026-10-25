@@ -113,6 +113,34 @@
       display: block;
     }
 
+    
+    .watch-hint { text-align: center; font-weight: 700; font-size: 1.05rem; margin: 0 0 0.75rem; }
+    .watch-hint span { display: inline-block; margin-left: 0.4rem; animation: nudge 1.4s ease-in-out infinite; }
+    @keyframes nudge { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(5px); } }
+    @media (prefers-reduced-motion: reduce) { .watch-hint span { animation: none; } }
+
+    .watch-link { position: relative; display: block; }
+    .watch-link img { transition: filter 0.2s ease; }
+    .watch-link:hover img { filter: brightness(0.85); }
+    .play-button {
+      position: absolute; top: 50%; left: 50%;
+      width: 5rem; height: 5rem;
+      transform: translate(-50%, -50%);
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.35);
+      transition: transform 0.2s ease;
+    }
+    .play-button::before {
+      content: ""; position: absolute; top: 50%; left: 50%;
+      transform: translate(-35%, -50%);
+      border-style: solid;
+      border-width: 0.9rem 0 0.9rem 1.5rem;
+      border-color: transparent transparent transparent #111;
+    }
+    .watch-link:hover .play-button { transform: translate(-50%, -50%) scale(1.08); }
+
+
     /* Much Larger Showcase Pairs */
     .showcase-pair {
       display: grid;
@@ -378,11 +406,15 @@
     <!-- Main Showcase -->
     <section class="showcase-grid">
       <div class="showcase-featured">
+        <p class="watch-hint">press to watch on Youtube <span aria-hidden="true">↓↓↓</span></p>
         <a href="https://youtu.be/e2nHwRDAK4U" target="_blank" rel="noopener" aria-label="Watch the Beat It video on YouTube">
           <img src="../assets/projects/beat-it/poster.jpg" alt="Title card of the video: the words BEAT IT in grey lettering on black" loading="lazy" decoding="async">
+          <span class="play-button" aria-hidden="true"></span>
         </a>
       </div>
     </section>
+
+    
 
     <!-- Brief / Summary Cards -->
     <section class="boxes boxes--3 project-summary-boxes">
