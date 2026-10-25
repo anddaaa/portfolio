@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap');
+
 @font-face {
   font-family: 'Nanum Pen Script';
   src: url('fonts/Nanum_Pen_Script/NanumPenScript-Regular.ttf') format('truetype');
@@ -23,7 +25,7 @@
   --gutter: clamp(1.25rem, 5vw, 4.5rem);
   --display: "Nanum Pen Script", cursive, sans-serif;
   --accent: "Instrument Serif", serif;
-  --body: "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body: "Outfit", "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --handwritten: "Nanum Pen Script", cursive, sans-serif;
 }
 
@@ -106,27 +108,39 @@ a.pill:hover { background: rgba(0, 0, 0, 0.08); color: var(--muted); }
 a.pill--solid:hover { background: var(--paper); color: var(--ink); }
 
 /* ---------- header ---------- */
+
 .bar {
   position: fixed;
   inset: 0 0 auto 0;
   z-index: 20;
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 1rem;
-  padding: calc(0.8rem + env(safe-area-inset-top, 0px)) var(--gutter) 0.8rem;
-  background: rgba(255, 255, 255, 0.9);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-bottom: 1.5px solid var(--ink);
+  justify-content: center;
+  padding: calc(0.9rem + env(safe-area-inset-top, 0px)) var(--gutter) 1.9rem;
+  background: linear-gradient(to bottom, var(--paper) 0%, var(--paper) 60%, rgba(222, 218, 213, 0) 100%);
+  pointer-events: none;
 }
-.bar__nav { display: flex; gap: 0.5rem; overflow-x: auto; scrollbar-width: none; }
+.bar__nav {
+  display: flex;
+  gap: 0.25rem;
+  max-width: 100%;
+  overflow-x: auto;
+  scrollbar-width: none;
+  pointer-events: auto;
+}
 .bar__nav::-webkit-scrollbar { display: none; }
-.bar__nav .pill {
-  background: transparent;
-  color: var(--ink);
-  border-color: transparent;
+.bar .bar__nav a.pill {
+  font-family: "Outfit", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  font-size: 0.72rem;
+  padding: 0.4rem 0.9rem;
 }
+
+@media (max-width: 480px) {
+  .bar .bar__nav a.pill { padding: 0.3rem 0.55rem; }
+}
+
 .bar__nav .pill.is-active,
 .bar__nav .pill:hover {
   background: rgba(0, 0, 0, 0.08);
