@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,12 +7,14 @@
   <title>Anda Oltean | Portfolio</title>
   <meta name="description" content="Portfolio of Anda Oltean, Digital Technology & Multimedia student at the Polytechnic University of Valencia: graphic design, 3D modelling, video editing and social media.">
   <meta property="og:title" content="Anda Oltean | Portfolio">
-  <meta property="og:description" content="University projects in graphic design, 3D and video, plus my own creative studio.">
+  <meta property="og:description" content="University projects in graphic design, 3D, video and web development, plus my own studio, KA Studio.">
   <meta property="og:type" content="website">
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23cebabb'/%3E%3Cpath d='M18 46 46 18M24 18h22v22' fill='none' stroke='%23000' stroke-width='7' stroke-linecap='square'/%3E%3C/svg%3E">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Marck+Script&family=Montserrat:wght@500;700;800&family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+  <!-- Marks that JavaScript is available, so the scroll animations can be used safely -->
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -26,9 +29,8 @@
 <header class="bar">
   <nav class="bar__nav" aria-label="Main">
     <a class="pill" href="#about">about me</a>
-    <a class="pill" href="#skills">skills</a>
     <a class="pill" href="#projects">projects</a>
-    <a class="pill" href="#experience">experience</a>
+    <a class="pill" href="#experience">skills &amp; experience</a>
     <a class="pill" href="#contact">contact</a>
   </nav>
 </header>
@@ -50,21 +52,20 @@
       <span>Digital Technology &amp; Multimedia</span>
     </div>
 
-    <!-- Scroll down indicator arrows -->
-    <div class="scroll-indicator" aria-hidden="true">
+    <!-- Scroll down arrows: click to go to the about me section -->
+    <a class="scroll-indicator" href="#about" aria-label="Scroll down to the about me section">
       <span></span>
       <span></span>
-    </div>
+    </a>
   </section>
 
 
   <section class="panel index-menu">
     <ul class="index-list">
       <li><span class="index-num">01</span><a href="#about">about me</a></li>
-      <li><span class="index-num">02</span><a href="#skills">skills</a></li>
-      <li><span class="index-num">03</span><a href="#projects">projects</a></li>
-      <li><span class="index-num">04</span><a href="#experience">experience</a></li>
-      <li><span class="index-num">05</span><a href="#contact">contact</a></li>
+      <li><span class="index-num">02</span><a href="#projects">projects</a></li>
+      <li><span class="index-num">03</span><a href="#experience">skills &amp; experience</a></li>
+      <li><span class="index-num">04</span><a href="#contact">contact</a></li>
     </ul>
   </section>
 
@@ -74,7 +75,7 @@
       <div class="about__text">
         <h2 class="display h-xl">about me</h2>
         <p>
-          I'm Anda, a Digital Technology & Multimedia student at the Polytechnic University of Valencia. 
+          I'm Anda, a Digital Technology &amp; Multimedia student at the Polytechnic University of Valencia. 
           I am drawn to audiovisual creation, 3D and animation. My focus is on creative direction and 
           storytelling, bringing ideas to life through motion and video editing.
         </p>
@@ -89,69 +90,22 @@
     </div>
   </section>
 
-  <!-- SKILLS -->
-  <section class="panel skills" id="skills">
-    <h2 class="display h-xl">skills</h2>
-    <div class="boxes boxes--3">
-      <div class="box">
-        <h3>creative &amp; technical</h3>
-        <ul>
-          <li>Content strategy &amp; ideation</li>
-          <li>Video production &amp; editing</li>
-          <li>Character design &amp; 3D modelling</li>
-          <li>Graphic &amp; web design</li>
-          <li>Social media</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>professional</h3>
-        <ul>
-          <li>Client communications</li>
-          <li>Lead generation &amp; outreach</li>
-          <li>Project management</li>
-          <li>Time management</li>
-        </ul>
-      </div>
-      <div class="box">
-        <h3>languages</h3>
-        <ul class="levels">
-          <li><span>Romanian</span><span>native</span></li>
-          <li><span>German</span><span>C1</span></li>
-          <li><span>English</span><span>C1</span></li>
-          <li><span>Spanish</span><span>B2</span></li>
-        </ul>
-      </div>
-    </div>
-  
-    <h2 class="display h-xl h-gap">tools &amp; software</h2>
-    <ul class="tools tools--inline" aria-label="Software I can use">
-      <li>Blender</li>
-      <li>Canva</li>
-      <li>CapCut</li>
-      <li>GIMP</li>
-      <li>Unity</li>
-      <li>Visual Studio Code</li>
-      <li>DaVinci Resolve</li>
-      <li>Microsoft 365</li>
-    </ul>
-  </section>
-
   <!-- PROJECTS INTRO -->
   <section class="panel panel--mauve projects-intro" id="projects">
     <h2 class="display h-xl">selected projects</h2>
-    <p class="lead">Projects from my degree at the Polytechnic University of Valencia, and my own studio.</p>
+    <p class="lead">Projects from my degree at the Polytechnic University of Valencia, and my own studio, KA Studio.</p>
     
     <div class="project-rows" aria-label="Projects">
       
       <!-- Project 01: Number on Left, Content on Right -->
-      <div class="project-row">
+      <div class="project-row reveal">
         <div class="project-row__number">01</div>
         <a class="project-feature" href="projects/design.html">
           <figure class="project-feature__media">
-            <img src="assets/projects/design/03-color.jpg" alt="graphic design & 3D preview" style="object-position: center top" loading="lazy" decoding="async">
+            <img src="assets/projects/design/03-color.jpg" alt="graphic design &amp; 3D preview" style="object-position: center top" loading="lazy" decoding="async">
           </figure>
           <span class="project-feature__panel">
-            <span class="project-feature__title">Graphic Design & 3D</span>
+            <span class="project-feature__title">Graphic Design &amp; 3D</span>
             <span class="project-feature__desc">A design book taken from first sketch to a textured 3D character, room, and final environment animation.</span>
             <span class="project-feature__cta">view project</span>
           </span>
@@ -159,7 +113,7 @@
       </div>
 
       <!-- Project 02: Number on Right, Content on Left (Flipped layout) -->
-      <div class="project-row project-row--flip">
+      <div class="project-row project-row--flip reveal">
         <div class="project-row__number">02</div>
         <a class="project-feature" href="projects/audiovisual.html">
           <figure class="project-feature__media">
@@ -174,7 +128,7 @@
       </div>
 
       <!-- Project 03: Number on Left, Content on Right -->
-      <div class="project-row">
+      <div class="project-row reveal">
         <div class="project-row__number">03</div>
         <a class="project-feature" href="projects/beatit.html">
           <figure class="project-feature__media">
@@ -189,7 +143,7 @@
       </div>
 
       <!-- Project 04: Fit4You (Flipped layout) -->
-      <div class="project-row project-row--flip">
+      <div class="project-row project-row--flip reveal">
         <div class="project-row__number">04</div>
         <a class="project-feature" href="projects/fit4you.html">
           <figure class="project-feature__media">
@@ -204,7 +158,7 @@
       </div>
 
       <!-- Project 05: SyncPlay -->
-      <div class="project-row">
+      <div class="project-row reveal">
         <div class="project-row__number">05</div>
         <a class="project-feature" href="projects/syncplay.html">
           <figure class="project-feature__media">
@@ -219,7 +173,7 @@
       </div>
 
       <!-- Project 06: Number on Right, Content on Left (Flipped layout) -->
-      <div class="project-row project-row--flip">
+      <div class="project-row project-row--flip reveal">
         <div class="project-row__number">06</div>
         <a class="project-feature" href="projects/ka.html">
           <figure class="project-feature__media">
@@ -235,57 +189,92 @@
     </div>
   </section>
 
-  <!-- EXPERIENCE -->
-  <section class="panel experience" id="experience">
-    <h2 class="display h-xl">experience</h2>
-    <ol class="timeline">
-      <li class="box">
-        <p class="when">Oct 2026 – present</p>
-        <div>
-          <h3>Contractor</h3>
-          <p>Interval Group. Providing German language training and conversation practice for business professionals.</p>
-        </div>
-      </li>
-      <li class="box">
-        <p class="when">Aug 2025 – Sep 2026</p>
-        <div>
-          <h3>Social media designer</h3>
-          <p>Mono Design Studio, Brașov, Romania. Social media strategy &amp; ideation, video production &amp; editing, trend research and content calendar management.</p>
-        </div>
-      </li>
-      <li class="box">
-        <p class="when">Jun 2025 – Jan 2026</p>
-        <div>
-          <h3>Social media assistant</h3>
-          <p>Markus Coenen – Wirkung im Yes-Modus, remote. Lead generation &amp; outreach, client communications &amp; onboarding, video editing and content scheduling.</p>
-        </div>
-      </li>
-      <li class="box">
-        <p class="when">Apr 2022 – present</p>
-        <div>
-          <h3>German teacher</h3>
-          <p>Romania and Spain. Lesson planning, communication and student progress assessment.</p>
-        </div>
-      </li>
-    </ol>
+  <!-- SKILLS & EXPERIENCE (one section: the old #skills and #experience links still work) -->
+  <section class="panel resume" id="experience">
+    <span id="skills" aria-hidden="true"></span>
+    <h2 class="display h-xl">skills &amp; experience</h2>
 
-    <h2 class="display h-xl h-gap">education</h2>
-    <ol class="timeline">
-      <li class="box">
-        <p class="when">Sep 2023 – present</p>
-        <div>
-          <h3>Bachelor's degree in Digital Technology and Multimedia</h3>
-          <p>Polytechnic University of Valencia, Spain.</p>
-        </div>
-      </li>
-      <li class="box">
-        <p class="when">Sep 2019 – Jun 2023</p>
-        <div>
-          <h3>High school diploma</h3>
-          <p>National College “Johannes Honterus”, Brașov, Romania.</p>
-        </div>
-      </li>
-    </ol>
+    <div class="board">
+
+      <div class="card card--exp">
+        <h3>experience</h3>
+        <ol class="entries">
+          <li class="entry">
+            <p class="when">Oct 2026 – present</p>
+            <h4>Contractor</h4>
+            <p>Interval Group. German training for business professionals.</p>
+          </li>
+          <li class="entry">
+            <p class="when">Aug 2025 – Sep 2026</p>
+            <h4>Social media designer</h4>
+            <p>Mono Design Studio, Brașov. Strategy, video editing, trend research, content calendar.</p>
+          </li>
+          <li class="entry">
+            <p class="when">Jun 2025 – Jan 2026</p>
+            <h4>Social media assistant</h4>
+            <p>Markus Coenen – Wirkung im Yes-Modus, remote. Lead generation, client communications, video editing, content scheduling.</p>
+          </li>
+          <li class="entry">
+            <p class="when">Apr 2022 – present</p>
+            <h4>German teacher</h4>
+            <p>Romania and Spain. Lesson planning, student assessment.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card card--edu">
+        <h3>education</h3>
+        <ol class="entries">
+          <li class="entry">
+            <p class="when">Sep 2023 – present</p>
+            <h4>Bachelor's degree in Digital Technology and Multimedia</h4>
+            <p>Polytechnic University of Valencia, Spain.</p>
+          </li>
+          <li class="entry">
+            <p class="when">Sep 2019 – Jun 2023</p>
+            <h4>High school diploma</h4>
+            <p>National College “Johannes Honterus”, Brașov, Romania.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="card card--lang">
+        <h3>languages</h3>
+        <ul class="levels">
+          <li><span>Romanian</span><span>native</span></li>
+          <li><span>German</span><span>C1</span></li>
+          <li><span>English</span><span>C1</span></li>
+          <li><span>Spanish</span><span>B2</span></li>
+        </ul>
+      </div>
+
+      <div class="card card--skills">
+        <h3>skills</h3>
+        <ul class="chips">
+          <li>Social media content &amp; strategy</li>
+          <li>Video production &amp; editing</li>
+          <li>3D modelling &amp; Character design</li>
+          <li>Graphic &amp; web design</li>
+          <li>Client communications</li>
+          <li>Project  &amp; time management</li>
+        </ul>
+      </div>
+
+      <div class="card card--tools">
+        <h3>tools &amp; software</h3>
+        <ul class="chips" aria-label="Software I can use">
+          <li>Blender</li>
+          <li>Canva</li>
+          <li>CapCut</li>
+          <li>GIMP</li>
+          <li>Unity</li>
+          <li>Visual Studio Code</li>
+          <li>DaVinci Resolve</li>
+          <li>Microsoft 365</li>
+        </ul>
+      </div>
+
+    </div>
   </section>
 
   <!-- COLLABORATION -->
@@ -347,5 +336,24 @@
 
 
 <script src="script.js"></script>
+<script>
+  /* Scroll reveal: each project tile fades and slides up when it enters the screen */
+  (function () {
+    var items = document.querySelectorAll('.reveal');
+    if (!('IntersectionObserver' in window)) {
+      items.forEach(function (el) { el.classList.add('is-visible'); });
+      return;
+    }
+    var io = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          io.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.15 });
+    items.forEach(function (el) { io.observe(el); });
+  })();
+</script>
 </body>
 </html>

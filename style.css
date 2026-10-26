@@ -243,16 +243,20 @@ a.pill--solid:hover { background: var(--paper); color: var(--ink); }
 /* Minimalist scroll down indicator arrows */
 .scroll-indicator {
   position: absolute;
-  bottom: 2rem;
+  bottom: 1.25rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 4px;
+  padding: 0.75rem 1rem;
+  cursor: pointer;
+  text-decoration: none;
   opacity: 0;
   animation: fadeInIndicator 1s ease 1s forwards, bounce 2s infinite 1s;
 }
+
 
 .scroll-indicator span {
   display: block;
@@ -415,7 +419,8 @@ a.pill--solid:hover { background: var(--paper); color: var(--ink); }
 }
 .box p, .box li { font-size: 0.95rem; }
 .box ul li + li { margin-top: 0.3rem; }
-.levels li { display: flex; justify-content: space-between; gap: 1rem; border-bottom: 1px solid rgba(0, 0, 0, 0.25); padding-bottom: 0.3rem; }
+.levels li { display: flex; justify-content: space-between; gap: 1rem; }
+.levels li +li { margin-top: 0.45rem; }
 .levels li span:last-child { font-weight: 700; }
 .when { font-weight: 700; font-size: 0.85rem; margin-bottom: 0.5rem; }
 
@@ -714,3 +719,105 @@ a.pill--solid:hover { background: var(--paper); color: var(--ink); }
   }
 }
 
+/* ---------- skills & experience board ---------- */
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  grid-template-areas:
+    "edu  exp tools"
+    "lang exp skills";
+  gap: 1rem;
+  margin-top: clamp(2rem, 4vw, 3rem);
+}
+.card--exp    { grid-area: exp; }
+.card--edu    { grid-area: edu; }
+.card--lang   { grid-area: lang; }
+.card--skills { grid-area: skills; }
+.card--tools  { grid-area: tools; }
+
+.card {
+  padding: 1.4rem 1.5rem;
+  border: 1.5px solid rgba(0, 0, 0, 0.2);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.22);
+}
+.card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.entry + .entry {
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.12);
+}
+.entry .when {
+  margin: 0 0 0.15rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+.entry h4 { font-size: 1rem; font-weight: 700; line-height: 1.3; }
+.entry p:not(.when) { font-size: 0.9rem; }
+
+.chip-label {
+  margin: 0 0 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+  margin-bottom: 1rem;
+}
+.chips li {
+  padding: 0.3rem 0.65rem;
+  border-radius: 6px;
+  background: rgba(0, 0, 0, 0.05);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--muted);
+}
+.card .chips:last-child { margin-bottom: 0; }
+
+@media (max-width: 1100px) {
+  .board {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "exp exp"
+      "edu lang"
+      "skills tools";
+  }
+}
+@media (max-width: 640px) {
+  .board {
+    grid-template-columns: 1fr;
+    grid-template-areas: "exp" "edu" "lang" "skills" "tools";
+  }
+}
+
+/* ---------- scroll reveal for the project tiles ---------- */
+.js .reveal {
+  opacity: 0;
+  transform: translateY(48px);
+  transition: opacity 0.9s ease, transform 0.9s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.js .reveal.is-visible { opacity: 1; transform: none; }
+@media (prefers-reduced-motion: reduce) {
+  .js .reveal { opacity: 1; transform: none; transition: none; }
+}
+
+/* small lift on hover (desktop only) */
+@media (hover: hover) {
+  .project-feature { transition: transform 0.3s ease, box-shadow 0.3s ease; }
+  .project-feature:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 34px rgba(0, 0, 0, 0.14);
+  }
+}
