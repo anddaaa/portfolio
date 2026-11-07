@@ -27,6 +27,7 @@
   --accent: "Instrument Serif", serif;
   --body: "Outfit", "Open Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
   --handwritten: "Nanum Pen Script", cursive, sans-serif;
+  --title: #5a514e;
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -66,6 +67,7 @@ ul, ol { padding: 0; list-style: none; }
   letter-spacing: 0.02em;
   line-height: 0.98;
   text-wrap: balance;
+  color: var(--title);
 }
 .h-mega { font-size: clamp(5rem, 20vw, 19rem); line-height: 0.85; }
 .h-xl   { font-size: clamp(3.8rem, 11vw, 9.5rem); }
@@ -186,7 +188,7 @@ a.pill--solid:hover { background: var(--paper); color: var(--ink); }
   letter-spacing: -0.06em;
   text-transform: lowercase;
   white-space: nowrap;
-  color: var(--ink);
+  color: var(--title);
   user-select: none;
 }
 
@@ -199,7 +201,7 @@ a.pill--solid:hover { background: var(--paper); color: var(--ink); }
   line-height: 1;
   font-weight: 400;
   text-transform: lowercase;           
-  color: var(--mauve);
+  color: #a59b8a;
   transform: translate(-50%, -50%) rotate(-5deg);
   white-space: nowrap;
   pointer-events: none;
